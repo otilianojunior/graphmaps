@@ -1,0 +1,8 @@
+osmnx
+networkx
+folium
+scikit-learn
+geopandas
+shapely
+matplotlib==3.9.2
+geopy==2.4.1
