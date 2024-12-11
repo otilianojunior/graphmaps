@@ -1,3 +1,28 @@
+"""
+O código que você compartilhou é responsável por criar um mapa interativo utilizando a biblioteca folium. Esse mapa exibe uma rota entre dois pontos, incluindo informações sobre a origem e o destino. Vamos analisar as funcionalidades:
+
+Função criar_mapa_interativo: A função recebe parâmetros que incluem:
+
+rota: Informações sobre a rota (não utilizadas diretamente no código).
+coordenadas_rota: Lista de coordenadas (latitude e longitude) que formam a rota.
+distancia_km: Distância da rota em quilômetros.
+origem_info e destino_info: Informações sobre a origem e destino, como nome da rua e bairro.
+output_path: Caminho para salvar o arquivo HTML do mapa gerado.
+Validação de coordenadas: Antes de gerar o mapa, o código verifica se há coordenadas suficientes (pelo menos duas) para criar a rota. Caso contrário, ele lança uma exceção.
+
+Inicialização do mapa: O mapa é criado com a biblioteca folium, sendo centrado na coordenada de origem (primeiro item da lista coordenadas_rota), com um zoom inicial de 14.
+
+Rota: Uma linha (PolyLine) é desenhada no mapa representando a rota, com uma descrição da distância da rota que aparece ao passar o mouse sobre ela.
+
+Marcadores de Origem e Destino:
+
+O marcador de origem é colocado na primeira coordenada da rota, com ícone verde e um popup exibindo o nome da rua e o bairro.
+O marcador de destino é colocado na última coordenada da rota, com ícone vermelho e popup similar com as informações de rua e bairro.
+Salvar o mapa: O mapa é salvo em um arquivo HTML no caminho especificado pelo parâmetro output_path.
+"""
+
+
+
 import folium
 
 

@@ -1,3 +1,18 @@
+"""
+Este script tem como objetivo gerar dados geográficos relacionados à cidade de Vitória da Conquista, Brasil, utilizando
+a biblioteca OSMnx para obter o grafo da cidade e a biblioteca Geopy para realizar geocodificação reversa (converter 
+coordenadas geográficas em nomes de ruas e bairros). 
+
+O fluxo principal do script inclui:
+1. Verificar se os dados do grafo e das localizações já existem em arquivos armazenados localmente.
+2. Caso os dados não existam, criar o grafo da cidade com base na malha viária para veículos (tipo "drive").
+3. Processar cada nó (node) do grafo, extraindo latitude, longitude, nome da rua e bairro.
+4. Utilizar multithreading para acelerar o processamento dos nós do grafo.
+5. Salvar os dados processados em um arquivo CSV para uso posterior.
+
+"""
+
+
 import os
 from concurrent.futures import ThreadPoolExecutor
 

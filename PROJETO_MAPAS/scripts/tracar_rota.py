@@ -1,3 +1,18 @@
+"""
+Este script calcula a rota mais curta entre dois pontos em uma cidade, utilizando um grafo viário previamente gerado e 
+salvo em um arquivo no formato GraphML. A biblioteca OSMnx é usada para carregar o grafo e identificar os nós mais 
+próximos às coordenadas de origem e destino, enquanto a biblioteca NetworkX é utilizada para determinar a menor rota 
+com base no peso dos arcos (distância).
+
+O fluxo principal do script inclui:
+1. Carregar o grafo viário armazenado localmente em "data/map.graphml".
+2. Identificar os nós do grafo mais próximos das coordenadas fornecidas para origem e destino.
+3. Calcular a rota mais curta entre os nós de origem e destino com base na distância ("length") dos arcos.
+4. Retornar a rota, suas coordenadas geográficas e a distância total em quilômetros.
+5. Opcionalmente, exibir um gráfico com a rota traçada.
+
+"""
+
 import os
 
 import networkx as nx
